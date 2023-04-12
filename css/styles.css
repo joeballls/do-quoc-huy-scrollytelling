@@ -1,0 +1,57 @@
+:root {
+    --black: #211A1D;
+    --purple: #6320EE;
+    --lilac: #8075FF;
+    --gray: #F8F0FB;
+    --light_mint: #CAD5CA;
+    --white: #ffffff;
+  }
+
+  @font-face {
+    font-family: pressStart;
+    src: url(/assets/font/PressStart2P-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: roboto;
+    src: url(/assets/font/Roboto-Regular.ttf);
+  }
+
+
+*{
+    margin: 0;
+}
+
+  body{
+      overflow-y: hidden;
+  }
+
+  header{
+      background-image: url(/assets/img/header_temp.jpg);
+      font-family: pressStart;
+      height: 100vh;
+      width: 100vw;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center; 
+  }
+
+  .title{
+      text-align: center;
+      position: relative;
+      top: 70px;
+      background-color: white;
+      font-size: 3vw;
+  }
+
+  .description{
+    text-align: center;
+    background-color: white;
+    font-size: 1.1vw;
+    position: fixed;
+    font-family: roboto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
