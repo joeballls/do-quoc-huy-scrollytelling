@@ -27,14 +27,14 @@
   }
 
   header{
-      background-image: url(../assets/img/header_temp.jpg);
+      background-image: url(../assets/img/header_bg.png);
       font-family: pressStart;
       height: 100vh;
       width: 100vw;
       display: flex;
       background-size: cover;
       background-repeat: no-repeat;
-      background-attachment: fixed;
+      background-attachment: fixed; /* delete this to make header not sticky :)*/
       background-position: center; 
       justify-content: center;
   }
@@ -70,24 +70,74 @@ section{
   display: flex;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed; /* delete this to make sections not sticky :)*/
   background-position: center; 
 }
 
 #ch1{
-  background-image: url(../assets/img/chapitre2/ciel.png);
+  background-image: url(../assets/img/chapitre2/bg_ch2.png);
 }
 
+.hallway{
+  width: 1022px;
+  height: 210px;
+}
+
+.doorway{
+  width: 230px;
+  height: 300px;
+}
+
+.rising{
+  width: 20vw;
+  height: 20vw;
+  aspect-ratio: 1/1;
+  background-size: 180vw 100%;
+  background-image: url(../assets/img/chapitre1/rising_spritesheet.png);
+  position: relative;
+  display: inline-block;
+
+  animation-name: rising;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(9);
+}
+
+.walking1{
+  width: 20vw;
+  height: 20vw;
+  aspect-ratio: 1/1;
+  background-size: 120vw 100%;
+  background-image: url(../assets/img/chapitre1/walk_anim_spritesheet.png);
+  position: relative;
+  display: inline-block;
+  
+  animation-name: walking;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(6);
+}
+
+@keyframes rising {
+  from { background-position: 0 0; }
+  to { background-position: -180vw 0; } 
+} 
+
+@keyframes walking {
+  from { background-position: 0 0; }
+  to { background-position: -120vw 0; } 
+} 
+
 #ch2{
-  background-image: url(../assets/img/chapitre2/ciel.png);
+  background-image: url(../assets/img/chapitre2/bg_ch2.png);
 }
 
 #ch3{
-  background-image: url(../assets/img/chapitre2/ciel.png);
+  background-image: url(../assets/img/chapitre2/bg_ch2.png);
 }
 
 #ch4{
-  background-image: url(../assets/img/chapitre2/ciel.png);
+  background-image: url(../assets/img/chapitre2/bg_ch2.png);
 }
 
 #ch5{
@@ -95,9 +145,9 @@ section{
 }
 
 #ch6{
-  background-image: url(../assets/img/chapitre6/ciel_aube.png);
+  background-image: url(../assets/img/chapitre6/bg_ch6.png);
 }
 
 #ch7{
-  background-image: url(../assets/img/chapitre7/colline.png);
+  background-image: url(../assets/img/chapitre7/bg_ch7.png);
 }
