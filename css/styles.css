@@ -1,101 +1,141 @@
 :root {
-    --black: #211A1D;
-    --purple: #6320EE;
-    --lilac: #8075FF;
-    --gray: #F8F0FB;
-    --light_mint: #CAD5CA;
-    --white: #ffffff;
-  }
-
-  @font-face {
-    font-family: pressStart;
-    src: url(/assets/font/PressStart2P-Regular.ttf);
-  }
-
-  @font-face {
-    font-family: roboto;
-    src: url(/assets/font/Roboto-Regular.ttf);
-  }
-
-
-*{
-    margin: 0;
+  --black: #211a1d;
+  --purple: #6320ee;
+  --lilac: #8075ff;
+  --gray: #f8f0fb;
+  --light_mint: #cad5ca;
+  --white: #ffffff;
 }
 
-  body{
-      overflow-x: hidden;
-  }
-
-  header{
-      background-image: url(../assets/img/header_bg.png);
-      font-family: pressStart;
-      height: 100vh;
-      width: 100vw;
-      display: flex;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed; /* delete this to make header not sticky :)*/
-      background-position: center; 
-      justify-content: center;
-  }
-
-  .title{
-      position: absolute;
-      justify-content: center;
-      top: 70px;
-      font-size: 3vw;
-      color: var(--white);
-  }
-
-  .description{
-    text-align: center;
-    font-size: 1.1vw;
-    position: fixed;
-    font-family: roboto;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    color: var(--white);
+@font-face {
+  font-family: pressStart;
+  src: url(/assets/font/PressStart2P-Regular.ttf);
 }
 
-.cta{
-  display: absolute;
-  align-self: flex-end;
-  margin-bottom: 0.3em;
+@font-face {
+  font-family: roboto;
+  src: url(/assets/font/Roboto-Regular.ttf);
 }
 
-section{
+* {
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  background-image: url(../assets/img/header_bg.png);
+  font-family: pressStart;
   height: 100vh;
   width: 100vw;
   display: flex;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* delete this to make sections not sticky :)*/
-  background-position: center; 
+  background-attachment: fixed; /* delete this to make header not sticky :)*/
+  background-position: center;
+  justify-content: center;
 }
 
-#ch1{
+.title {
+  position: absolute;
+  justify-content: center;
+  top: 70px;
+  font-size: 3vw;
+  color: var(--white);
+
+  animation-name: bed_float;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate-reverse;
+}
+
+.bed {
+  width: 410px;
+  height: 120px;
+  top: 54vh;
+  position: absolute;
+
+  animation-name: bed_float;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
+@keyframes bed_float {
+  0% {
+    transform: translate(10%, 8%) rotate(3deg);
+  }
+  50% {
+    transform: translate(-8%, 5%) rotate(5deg);
+  }
+  100% {
+    transform: translate(10%, 8%) rotate(-3deg);
+  }
+}
+
+.description {
+  text-align: center;
+  font-size: 1.1vw;
+  position: fixed;
+  font-family: roboto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: var(--white);
+}
+
+.cta {
+  display: absolute;
+  align-self: flex-end;
+  margin-bottom: 0.3em;
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  background-position: center;
+}
+
+/* chapter1*/
+#ch1 {
   background-image: url(../assets/img/chapitre2/bg_ch2.png);
+  position: relative;
 }
 
-.hallway{
-  width: 1022px;
-  height: 210px;
+.hallway {
+  width: 2044px;
+  height: 420px;
+  top: 30vh;
+  left: -10vh;
+  position: absolute;
 }
 
-.doorway{
-  width: 230px;
-  height: 300px;
+.doorway {
+  width: 2044px;
+  height: 420px;
+  top: 30vh;
+  right: -10vh;
+  z-index: 1;
+  position: absolute;
 }
 
-.rising{
+.rising {
   width: 20vw;
   height: 20vw;
   aspect-ratio: 1/1;
   background-size: 180vw 100%;
   background-image: url(../assets/img/chapitre1/rising_spritesheet.png);
-  position: relative;
+  position: absolute;
   display: inline-block;
+  z-index: 1;
 
   animation-name: rising;
   animation-duration: 1s;
@@ -103,15 +143,16 @@ section{
   animation-timing-function: steps(9);
 }
 
-.walking1{
+.walking1 {
   width: 20vw;
   height: 20vw;
   aspect-ratio: 1/1;
   background-size: 120vw 100%;
   background-image: url(../assets/img/chapitre1/walk_anim_spritesheet.png);
-  position: relative;
+  position: absolute;
   display: inline-block;
-  
+  z-index: 1;
+
   animation-name: walking;
   animation-duration: 1s;
   animation-iteration-count: infinite;
@@ -119,35 +160,384 @@ section{
 }
 
 @keyframes rising {
-  from { background-position: 0 0; }
-  to { background-position: -180vw 0; } 
-} 
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -180vw 0;
+  }
+}
 
 @keyframes walking {
-  from { background-position: 0 0; }
-  to { background-position: -120vw 0; } 
-} 
-
-#ch2{
-  background-image: url(../assets/img/chapitre2/bg_ch2.png);
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -120vw 0;
+  }
 }
 
-#ch3{
+/* chapter2*/
+#ch2 {
   background-image: url(../assets/img/chapitre2/bg_ch2.png);
+  position: relative;
 }
 
-#ch4{
-  background-image: url(../assets/img/chapitre2/bg_ch2.png);
+.hallway2 {
+  width: 2044px;
+  height: 420px;
+  top: 30vh;
+  left: -90vw;
+  z-index: 4;
+  position: absolute;
 }
 
-#ch5{
+.doorway2 {
+  width: 2044px;
+  height: 420px;
+  top: 30vh;
+  right: 83vw;
+  z-index: 4;
+  position: absolute;
+}
+
+.road_ch2 {
+  width: 2044px;
+  height: 420px;
+  top: 30vh;
+  left: 5.5vw;
+  z-index: 3;
+  position: absolute;
+}
+
+.building1 {
+  width: 157px;
+  height: 387px;
+  left: 20vw;
+  top: 22vh;
+  position: absolute;
+  border: solid red;
+  z-index: 2;
+}
+
+.building2 {
+  width: 157px;
+  height: 450px;
+  left: 30vw;
+  top: 14vh;
+  position: absolute;
+  border: solid indigo;
+  z-index: 2;
+}
+
+.building3 {
+  width: 157px;
+  height: 468px;
+  left: 44vw;
+  top: 13vh;
+  position: absolute;
+  border: solid green;
+  z-index: 2;
+}
+
+.bg_building1 {
+  width: 172px;
+  height: 591px;
+  left: 25vw;
+  position: absolute;
+  border: solid yellow;
+  z-index: 1;
+}
+
+.bg_building2 {
+  width: 172px;
+  height: 520px;
+  left: 36vw;
+  top: 10vh;
+  position: absolute;
+  border: solid blue;
+  z-index: 1;
+}
+
+.bg_building3 {
+  width: 172px;
+  height: 639px;
+  left: 48vw;
+  top: -5vh;
+  position: absolute;
+  border: solid orange;
+  z-index: 1;
+}
+
+/* chapter3*/
+#ch3 {
+  background-image: url(../assets/img/chapitre2/bg_ch2.png);
+  position: relative;
+}
+
+.tree1 {
+  width: 232px;
+  height: 433px;
+  top: 26vh;
+  left: 2vw;
+  position: absolute;
+  /*
+  border: solid red;
+  */
+  z-index: 2;
+}
+
+.tree2 {
+  width: 169px;
+  height: 373px;
+  top: 36.5vh;
+  left: 32vw;
+  position: absolute;
+  /*
+  border: solid blue;
+  */
+  z-index: 2;
+}
+
+.tree3 {
+  width: 274px;
+  height: 399px;
+  top: 31vh;
+  left: 14vw;
+  position: absolute;
+  /*
+  border: solid orange;
+  */
+  z-index: 2;
+}
+
+.bg_tree1 {
+  width: 193px;
+  height: 390px;
+  top: 18vh;
+  left: 9vw;
+  position: absolute;
+  /*
+  border: solid green;
+  */
+}
+
+.bg_tree2 {
+  width: 193px;
+  height: 539px;
+  top: 6vh;
+  left: 22vw;
+  position: absolute;
+  /*
+  border: solid yellow;
+  */
+}
+
+.bg_tree3 {
+  width: 245px;
+  height: 335px;
+  top: 25vh;
+  left: 35vw;
+  position: absolute;
+  /*
+  border: solid cyan;
+  */
+}
+
+.road_ch3 {
+  width: 2044px;
+  height: 420px;
+  top: 30vh;
+  left: -7vw;
+  position: absolute;
+}
+
+.car1 {
+  width: 215px;
+  height: 80px;
+  top: 59.5vh;
+  left: 5vw;
+  position: absolute;
+  z-index: 1;
+}
+
+.car2 {
+  width: 210px;
+  height: 85px;
+  top: 58.5vh;
+  left: 20vw;
+  position: absolute;
+  z-index: 1;
+}
+
+.car3 {
+  width: 210px;
+  height: 100px;
+  top: 56.5vh;
+  left: 40vw;
+  position: absolute;
+  z-index: 1;
+}
+
+/* chapter4*/
+#ch4 {
+  background-image: url(../assets/img/chapitre2/bg_ch2.png);
+  position: relative;
+}
+
+.bridge_front {
+  width: 977px;
+  height: 150px;
+  position: absolute;
+}
+
+.bridge_back {
+  width: 977px;
+  height: 129px;
+  position: absolute;
+}
+
+.bridge_shadow {
+  width: 977px;
+  height: 139px;
+  position: absolute;
+}
+
+.water_walls {
+  width: 971px;
+  height: 25px;
+  position: absolute;
+}
+
+/* chapter5*/
+#ch5 {
   background-image: url(../assets/img/chapitre5/parralaxe1.png);
+  position: relative;
 }
 
-#ch6{
+.parallax2 {
+  width: 1920px;
+  height: 2156px;
+  position: absolute;
+}
+
+.parallax3 {
+  width: 1920px;
+  height: 263px;
+  position: absolute;
+}
+
+.empty_walls {
+  width: 1420px;
+  height: 150px;
+  position: absolute;
+}
+
+/* chapter6*/
+#ch6 {
   background-image: url(../assets/img/chapitre6/bg_ch6.png);
+  position: relative;
 }
 
-#ch7{
+.cloud1 {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+}
+
+.cloud2 {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+}
+
+.cloud3 {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+}
+
+.cloud4 {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+}
+
+.cloud5 {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+}
+
+.cloud6 {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+}
+
+.cloud7 {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+}
+
+.sun {
+  width: 210px;
+  height: 200px;
+}
+
+.falling_spritesheet {
+  width: 20vw;
+  height: 20vw;
+  aspect-ratio: 1/1;
+  background-size: 120vw 100%;
+  top: 50px;
+  background-image: url(../assets/img/chapitre6/falling_fella_spritesheet.png);
+  position: absolute;
+  display: inline-block;
+
+  animation-name: falling;
+  animation-duration: 0.4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(6);
+}
+
+@keyframes falling {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -120vw 0;
+  }
+}
+
+/* chapter7*/
+#ch7 {
   background-image: url(../assets/img/chapitre7/bg_ch7.png);
+  position: relative;
+}
+
+.felloff_spritesheet {
+  width: 20vw;
+  height: 20vw;
+  aspect-ratio: 1/1;
+  background-size: 280vw 100%;
+  top: 50px;
+  background-image: url(../assets/img/chapitre7/lilfella_felloff_spritesheet.png);
+  position: absolute;
+  display: inline-block;
+
+  animation-name: felloff;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(14);
+}
+
+@keyframes felloff {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -280vw 0;
+  }
 }
