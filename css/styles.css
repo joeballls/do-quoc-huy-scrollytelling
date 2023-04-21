@@ -102,6 +102,8 @@ section {
   background-repeat: no-repeat;
 
   background-position: center;
+  
+  border: solid red;
 }
 
 /* chapter1*/
