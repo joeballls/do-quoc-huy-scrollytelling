@@ -100,16 +100,14 @@ section {
   display: flex;
   background-size: cover;
   background-repeat: no-repeat;
-
   background-position: center;
-  
-  border: solid red;
 }
 
 /* chapter1*/
 #ch1 {
   background-image: url(../assets/img/chapitre2/bg_ch2.png);
   position: relative;
+  z-index: 2;
 }
 
 .hallway {
@@ -117,14 +115,13 @@ section {
   height: 420px;
   top: 30vh;
   left: -10vh;
+  background-image: url(../assets/img/chapitre1/hallway.png);
   position: absolute;
 }
 
 .doorway {
   width: 2044px;
   height: 420px;
-  top: 30vh;
-  right: -10vh;
   z-index: 1;
   position: absolute;
 }
@@ -189,16 +186,14 @@ section {
   width: 2044px;
   height: 420px;
   top: 30vh;
-  left: -90vw;
-  z-index: 4;
+  left: -181vh;
+  background-image: url(../assets/img/chapitre1/hallway.png);
   position: absolute;
 }
 
 .doorway2 {
   width: 2044px;
   height: 420px;
-  top: 30vh;
-  right: 83vw;
   z-index: 4;
   position: absolute;
 }
@@ -215,10 +210,9 @@ section {
 .building1 {
   width: 157px;
   height: 387px;
-  left: 20vw;
+  left: 21vw;
   top: 22vh;
   position: absolute;
-  border: solid red;
   z-index: 2;
 }
 
@@ -228,7 +222,6 @@ section {
   left: 30vw;
   top: 14vh;
   position: absolute;
-  border: solid indigo;
   z-index: 2;
 }
 
@@ -238,7 +231,33 @@ section {
   left: 44vw;
   top: 13vh;
   position: absolute;
-  border: solid green;
+  z-index: 2;
+}
+
+.building4 {
+  width: 157px;
+  height: 387px;
+  left: 86vw;
+  top: 22vh;
+  position: absolute;
+  z-index: 2;
+}
+
+.building5 {
+  width: 157px;
+  height: 450px;
+  left: 74vw;
+  top: 14vh;
+  position: absolute;
+  z-index: 2;
+}
+
+.building6 {
+  width: 157px;
+  height: 468px;
+  left: 56vw;
+  top: 13vh;
+  position: absolute;
   z-index: 2;
 }
 
@@ -247,7 +266,6 @@ section {
   height: 591px;
   left: 25vw;
   position: absolute;
-  border: solid yellow;
   z-index: 1;
 }
 
@@ -257,7 +275,6 @@ section {
   left: 36vw;
   top: 10vh;
   position: absolute;
-  border: solid blue;
   z-index: 1;
 }
 
@@ -267,7 +284,42 @@ section {
   left: 48vw;
   top: -5vh;
   position: absolute;
-  border: solid orange;
+  z-index: 1;
+}
+
+.bg_building4 {
+  width: 172px;
+  height: 450px;
+  left: 58vw;
+  top: 15vh;
+  position: absolute;
+  z-index: 1;
+}
+
+.bg_building5 {
+  width: 172px;
+  height: 639px;
+  left: 68vw;
+  top: -5.3vh;
+  position: absolute;
+  z-index: 1;
+}
+
+.bg_building6 {
+  width: 172px;
+  height: 490px;
+  left: 79vw;
+  top: 10vh;
+  position: absolute;
+  z-index: 1;
+}
+
+.bg_building7 {
+  width: 172px;
+  height: 639px;
+  left: 89vw;
+  top: -5vh;
+  position: absolute;
   z-index: 1;
 }
 
@@ -313,6 +365,42 @@ section {
   z-index: 2;
 }
 
+.tree4 {
+  width: 169px;
+  height: 373px;
+  top: 36.5vh;
+  left: 62vw;
+  position: absolute;
+  /*
+  border: solid blue;
+  */
+  z-index: 2;
+}
+
+.tree5 {
+  width: 274px;
+  height: 399px;
+  top: 31vh;
+  left: 44vw;
+  position: absolute;
+  /*
+  border: solid orange;
+  */
+  z-index: 2;
+}
+
+.tree6 {
+  width: 232px;
+  height: 433px;
+  top: 26vh;
+  left: 76vw;
+  position: absolute;
+  /*
+  border: solid red;
+  */
+  z-index: 2;
+}
+
 .bg_tree1 {
   width: 193px;
   height: 390px;
@@ -346,6 +434,39 @@ section {
   */
 }
 
+.bg_tree4 {
+  width: 193px;
+  height: 539px;
+  top: 6vh;
+  left: 49vw;
+  position: absolute;
+  /*
+  border: solid yellow;
+  */
+}
+
+.bg_tree5 {
+  width: 345px;
+  height: 435px;
+  top: 17vh;
+  left: 62vw;
+  position: absolute;
+  /*
+  border: solid yellow;
+  */
+}
+
+.bg_tree6 {
+  width: 245px;
+  height: 335px;
+  top: 28vh;
+  left: 85vw;
+  position: absolute;
+  /*
+  border: solid cyan;
+  */
+}
+
 .road_ch3 {
   width: 2044px;
   height: 420px;
@@ -355,30 +476,31 @@ section {
 }
 
 .car1 {
-  width: 215px;
-  height: 80px;
-  top: 59.5vh;
+  width: 430px;
+  height: 160px;
+  top: 50vh;
   left: 5vw;
   position: absolute;
   z-index: 1;
 }
 
 .car2 {
-  width: 210px;
-  height: 85px;
-  top: 58.5vh;
-  left: 20vw;
+  width: 420px;
+  height: 170px;
+  top: 49vh;
+  left: 28vw;
   position: absolute;
   z-index: 1;
 }
 
 .car3 {
-  width: 210px;
-  height: 100px;
-  top: 56.5vh;
-  left: 40vw;
+  width: 420px;
+  height: 200px;
+  top: 46vh;
+  left: 70vw;
   position: absolute;
   z-index: 1;
+  transform: scaleX(-1);
 }
 
 /* chapter4*/
@@ -388,26 +510,56 @@ section {
 }
 
 .bridge_front {
-  width: 977px;
-  height: 150px;
+  width: 1130px;
+  height: 300px;
+  top: 41.7vh;
+  right: -8.3vw;
+  z-index: 2;
   position: absolute;
 }
 
 .bridge_back {
-  width: 977px;
-  height: 129px;
-  position: absolute;
-}
-
-.bridge_shadow {
-  width: 977px;
-  height: 139px;
+  width: 1130px;
+  height: 300px;
+  top: 41.7vh;
+  right: -8.3vw;
+  z-index: 2;
   position: absolute;
 }
 
 .water_walls {
   width: 971px;
   height: 25px;
+  top: 66.2vh;
+  right: 0vw;
+  display: none;
+  position: absolute;
+}
+
+.road_ch4 {
+  width: 2044px;
+  height: 300px;
+  top: 40.1vh;
+  left: -57vw;
+  z-index: 3;
+  position: absolute;
+}
+
+.road_shadow {
+  width: 2920px;
+  height: 600px;
+  top: 12.4vh;
+  left: -102vw;
+  z-index: 3;
+  position: absolute;
+}
+
+.water {
+  width: 100%;
+  height: 25vh;
+  bottom: 0vh;
+  background-color: var(--purple);
+  opacity: 50%;
   position: absolute;
 }
 
@@ -418,14 +570,15 @@ section {
 }
 
 .parallax2 {
-  width: 1920px;
-  height: 2156px;
+  width: 100%;
+  height: 100%;
   position: absolute;
 }
 
 .parallax3 {
   width: 1920px;
   height: 263px;
+  bottom: 0px;
   position: absolute;
 }
 
@@ -433,6 +586,7 @@ section {
   width: 1420px;
   height: 150px;
   position: absolute;
+  display: none;
 }
 
 /* chapter6*/
@@ -442,50 +596,65 @@ section {
 }
 
 .cloud1 {
-  width: 160px;
-  height: 160px;
+  width: 320px;
+  height: 320px;
+  top: 21vh;
+  left: 12vw;
   position: absolute;
 }
 
 .cloud2 {
-  width: 160px;
-  height: 160px;
+  width: 320px;
+  height: 320px;
+  top: 11vh;
+  left: 72vw;
   position: absolute;
 }
 
 .cloud3 {
-  width: 160px;
-  height: 160px;
+  width: 320px;
+  height: 320px;
+  top: 53vh;
+  left: 84vw;
   position: absolute;
 }
 
 .cloud4 {
-  width: 160px;
-  height: 160px;
+  width: 320px;
+  height: 320px;
+  top: 7vh;
+  left: 36vw;
   position: absolute;
 }
 
 .cloud5 {
-  width: 160px;
-  height: 160px;
+  width: 320px;
+  height: 320px;
+  top: 54vh;
+  left: 7vw;
   position: absolute;
 }
 
 .cloud6 {
-  width: 160px;
-  height: 160px;
+  width: 320px;
+  height: 320px;
+  left: 12vw;
+  display: none;
   position: absolute;
 }
 
 .cloud7 {
-  width: 160px;
-  height: 160px;
+  width: 320px;
+  height: 320px;
+  top: 46vh;
+  left: 52vw;
   position: absolute;
 }
 
 .sun {
   width: 210px;
   height: 200px;
+  position: absolute;
 }
 
 .falling_spritesheet {
