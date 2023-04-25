@@ -38,6 +38,12 @@ header {
   justify-content: center;
 }
 
+.story_text {
+  font-family: pressStart;
+  color: white;
+  font-size: 1.5vw;
+}
+
 .title {
   position: absolute;
   justify-content: center;
@@ -101,6 +107,7 @@ section {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  border: red solid;
 }
 
 /* chapter1*/
@@ -110,18 +117,27 @@ section {
   z-index: 2;
 }
 
+.text_ch1 {
+  position: absolute;
+  top: 8vh;
+  left: 40vw;
+}
+
 .hallway {
-  width: 2044px;
-  height: 420px;
-  top: 30vh;
+  width: 3066px;
+  height: 630px;
+  background-size: contain;
+  top: 20vh;
   left: -10vh;
   background-image: url(../assets/img/chapitre1/hallway.png);
   position: absolute;
 }
 
 .doorway {
-  width: 2044px;
-  height: 420px;
+  width: 3066px;
+  height: 630px;
+  background-size: contain;
+  background-size: contain;
   z-index: 1;
   position: absolute;
 }
@@ -129,6 +145,8 @@ section {
 .rising {
   width: 20vw;
   height: 20vw;
+  top: 35vh;
+  left: 10vw;
   aspect-ratio: 1/1;
   background-size: 180vw 100%;
   background-image: url(../assets/img/chapitre1/rising_spritesheet.png);
@@ -145,6 +163,8 @@ section {
 .walking1 {
   width: 20vw;
   height: 20vw;
+  top: 35vh;
+  left: 10vw;
   aspect-ratio: 1/1;
   background-size: 120vw 100%;
   background-image: url(../assets/img/chapitre1/walk_anim_spritesheet.png);
@@ -182,6 +202,13 @@ section {
   position: relative;
 }
 
+.text_ch2 {
+  position: absolute;
+  bottom: 17vh;
+  left: 40vw;
+  z-index: 5;
+}
+
 .hallway2 {
   width: 2044px;
   height: 420px;
@@ -205,6 +232,33 @@ section {
   left: 5.5vw;
   z-index: 3;
   position: absolute;
+}
+
+.walking2 {
+  width: 10vw;
+  height: 10vw;
+  top: 45vh;
+  left: 4vw;
+  aspect-ratio: 1/1;
+  background-size: 60vw 100%;
+  background-image: url(../assets/img/chapitre1/walk_anim_spritesheet.png);
+  position: absolute;
+  display: inline-block;
+  z-index: 5;
+
+  animation-name: walking2;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(6);
+}
+
+@keyframes walking2 {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -60vw 0;
+  }
 }
 
 .building1 {
@@ -327,6 +381,40 @@ section {
 #ch3 {
   background-image: url(../assets/img/chapitre2/bg_ch2.png);
   position: relative;
+}
+
+.text_ch3 {
+  position: absolute;
+  bottom: 17vh;
+  left: 40vw;
+  z-index: 5;
+}
+
+.walking3 {
+  width: 15vw;
+  height: 15vw;
+  top: 36vh;
+  left: 4vw;
+  aspect-ratio: 1/1;
+  background-size: 90vw 100%;
+  background-image: url(../assets/img/chapitre1/walk_anim_spritesheet.png);
+  position: absolute;
+  display: inline-block;
+  z-index: 2;
+
+  animation-name: walking3;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(6);
+}
+
+@keyframes walking3 {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -90vw 0;
+  }
 }
 
 .tree1 {
@@ -482,6 +570,7 @@ section {
   left: 5vw;
   position: absolute;
   z-index: 1;
+  filter: brightness(70%);
 }
 
 .car2 {
@@ -491,6 +580,7 @@ section {
   left: 28vw;
   position: absolute;
   z-index: 1;
+  filter: brightness(70%);
 }
 
 .car3 {
@@ -500,6 +590,7 @@ section {
   left: 70vw;
   position: absolute;
   z-index: 1;
+  filter: brightness(70%);
   transform: scaleX(-1);
 }
 
@@ -509,12 +600,37 @@ section {
   position: relative;
 }
 
+.text_ch4 {
+  position: absolute;
+  top: 17vh;
+  left: 40vw;
+  z-index: 5;
+}
+
+.walking4 {
+  width: 15vw;
+  height: 15vw;
+  top: 36vh;
+  left: -5vw;
+  aspect-ratio: 1/1;
+  background-size: 90vw 100%;
+  background-image: url(../assets/img/chapitre1/walk_anim_spritesheet.png);
+  position: absolute;
+  display: inline-block;
+  z-index: 3;
+
+  animation-name: walking3;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(6);
+}
+
 .bridge_front {
   width: 1130px;
   height: 300px;
   top: 41.7vh;
   right: -8.3vw;
-  z-index: 2;
+  z-index: 4;
   position: absolute;
 }
 
@@ -569,6 +685,31 @@ section {
   position: relative;
 }
 
+.text_ch5 {
+  position: absolute;
+  top: 25vh;
+  left: 40vw;
+  z-index: 5;
+}
+
+.walking5 {
+  width: 15vw;
+  height: 15vw;
+  top: 57vh;
+  left: -5vw;
+  aspect-ratio: 1/1;
+  background-size: 90vw 100%;
+  background-image: url(../assets/img/chapitre1/walk_anim_spritesheet.png);
+  position: absolute;
+  display: inline-block;
+  z-index: 3;
+
+  animation-name: walking3;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(6);
+}
+
 .parallax2 {
   width: 100%;
   height: 100%;
@@ -595,12 +736,20 @@ section {
   position: relative;
 }
 
+.text_ch6 {
+  position: absolute;
+  top: 10vh;
+  right: 10vw;
+  z-index: 5;
+}
+
 .cloud1 {
   width: 320px;
   height: 320px;
   top: 21vh;
   left: 12vw;
   position: absolute;
+  filter: brightness(90%);
 }
 
 .cloud2 {
@@ -609,6 +758,7 @@ section {
   top: 11vh;
   left: 72vw;
   position: absolute;
+  filter: brightness(90%);
 }
 
 .cloud3 {
@@ -617,6 +767,7 @@ section {
   top: 53vh;
   left: 84vw;
   position: absolute;
+  filter: brightness(90%);
 }
 
 .cloud4 {
@@ -625,6 +776,7 @@ section {
   top: 7vh;
   left: 36vw;
   position: absolute;
+  filter: brightness(90%);
 }
 
 .cloud5 {
@@ -633,6 +785,7 @@ section {
   top: 54vh;
   left: 7vw;
   position: absolute;
+  filter: brightness(90%);
 }
 
 .cloud6 {
@@ -641,6 +794,7 @@ section {
   left: 12vw;
   display: none;
   position: absolute;
+  filter: brightness(90%);
 }
 
 .cloud7 {
@@ -649,6 +803,7 @@ section {
   top: 46vh;
   left: 52vw;
   position: absolute;
+  filter: brightness(90%);
 }
 
 .sun {
@@ -688,12 +843,20 @@ section {
   position: relative;
 }
 
+.text_ch7 {
+  position: absolute;
+  top: 10vh;
+  left: 10vw;
+  z-index: 5;
+}
+
 .felloff_spritesheet {
   width: 20vw;
   height: 20vw;
+  right: -3vw;
+  top: 33vh;
   aspect-ratio: 1/1;
   background-size: 280vw 100%;
-  top: 50px;
   background-image: url(../assets/img/chapitre7/lilfella_felloff_spritesheet.png);
   position: absolute;
   display: inline-block;
@@ -702,6 +865,33 @@ section {
   animation-duration: 4s;
   animation-iteration-count: infinite;
   animation-timing-function: steps(14);
+}
+
+.walking7 {
+  width: 20vw;
+  height: 20vw;
+  right: 2vw;
+  top: 33vh;
+  aspect-ratio: 1/1;
+  background-size: 120vw 100%;
+  background-image: url(../assets/img/chapitre1/walk_anim_spritesheet.png);
+  position: absolute;
+  display: inline-block;
+  z-index: 3;
+
+  animation-name: walking7;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(6);
+}
+
+@keyframes walking7 {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -120vw 0;
+  }
 }
 
 @keyframes felloff {
