@@ -705,6 +705,7 @@ section {
 #ch5 {
   background-image: url(../assets/img/chapitre5/parralaxe1.png);
   position: relative;
+  z-index: 6;
 }
 
 .text_ch5 {
@@ -779,7 +780,7 @@ section {
 .cloud1 {
   width: 320px;
   height: 320px;
-  top: 21vh;
+  top: 101vh;
   left: 12vw;
   position: absolute;
   filter: brightness(90%);
@@ -788,7 +789,7 @@ section {
 .cloud2 {
   width: 320px;
   height: 320px;
-  top: 11vh;
+  top: 101vh;
   left: 72vw;
   position: absolute;
   filter: brightness(90%);
@@ -797,7 +798,7 @@ section {
 .cloud3 {
   width: 320px;
   height: 320px;
-  top: 53vh;
+  top: 101vh;
   left: 84vw;
   position: absolute;
   filter: brightness(90%);
@@ -806,7 +807,7 @@ section {
 .cloud4 {
   width: 320px;
   height: 320px;
-  top: 7vh;
+  top: 101vh;
   left: 36vw;
   position: absolute;
   filter: brightness(90%);
@@ -815,7 +816,7 @@ section {
 .cloud5 {
   width: 320px;
   height: 320px;
-  top: 54vh;
+  top: 101vh;
   left: 7vw;
   position: absolute;
   filter: brightness(90%);
@@ -824,7 +825,7 @@ section {
 .cloud6 {
   width: 320px;
   height: 320px;
-  left: 12vw;
+  left: 101vw;
   display: none;
   position: absolute;
   filter: brightness(90%);
@@ -833,7 +834,7 @@ section {
 .cloud7 {
   width: 320px;
   height: 320px;
-  top: 46vh;
+  top: 101vh;
   left: 52vw;
   position: absolute;
   filter: brightness(90%);
@@ -874,6 +875,7 @@ section {
 #ch7 {
   background-image: url(../assets/img/chapitre7/bg_ch7.png);
   position: relative;
+  z-index: 7;
 }
 
 .text_ch7 {
@@ -886,8 +888,7 @@ section {
 .felloff_spritesheet {
   width: 20vw;
   height: 20vw;
-  right: -3vw;
-  top: 33vh;
+  left: 4vw;
   aspect-ratio: 1/1;
   background-size: 280vw 100%;
   background-image: url(../assets/img/chapitre7/lilfella_felloff_spritesheet.png);
@@ -903,8 +904,8 @@ section {
 .walking7 {
   width: 20vw;
   height: 20vw;
-  right: 2vw;
-  top: 33vh;
+  right: 43vw;
+  top: 52vh;
   aspect-ratio: 1/1;
   background-size: 120vw 100%;
   background-image: url(../assets/img/chapitre1/walk_anim_spritesheet.png);

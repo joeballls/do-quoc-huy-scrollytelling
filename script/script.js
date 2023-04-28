@@ -151,3 +151,68 @@ ch5_walk
     duration: 0,
   })
   .to(".walking5", { y: "100vmin", ease: Circ.easeIn, duration: 2 });
+
+let ch6_fall = gsap.timeline();
+ch6_fall
+  .to(".falling_spritesheet", {
+    x: "120vmin",
+    ease: "ease: Power4. easeInOut",
+    yoyo: true,
+    repeat: -1,
+    duration: 3,
+  })
+  .to(
+    ".cloud1",
+    { y: "-150vmin", ease: "linear", repeat: -1, duration: 0.6 },
+    "<"
+  )
+  .to(
+    ".cloud2",
+    { y: "-150vmin", ease: "linear", repeat: -1, duration: 0.6 },
+    "-=0.3"
+  )
+  .to(
+    ".cloud3",
+    { y: "-150vmin", ease: "linear", repeat: -1, duration: 0.6 },
+    "-=0.1"
+  )
+  .to(
+    ".cloud4",
+    { y: "-150vmin", ease: "linear", repeat: -1, duration: 0.6 },
+    "-=0.3"
+  )
+  .to(
+    ".cloud5",
+    { y: "-150vmin", ease: "linear", repeat: -1, duration: 0.6 },
+    "-=0.4"
+  )
+  .to(
+    ".cloud7",
+    { y: "-150vmin", ease: "linear", repeat: -1, duration: 0.6 },
+    "-=0.16"
+  )
+  .to(
+    ".falling_spritesheet",
+    {
+      y: "20vmin",
+      ease: "ease: Power4. easeInOut",
+      yoyo: true,
+      repeat: -1,
+      duration: 3,
+    },
+    "-=2.5"
+  );
+
+let ch7_end = gsap.timeline();
+ch7_end
+  .to(".felloff_spritesheet", { opacity: 0, ease: "linear", duration: 0 })
+  .from(".walking7", { x: "-120vmin", ease: "linear", duration: 4 })
+  .to(".walking7", { x: "85vmin", y: "-18vmin", ease: "linear", duration: 4 })
+  .to(".walking7", {
+    x: "85vmin",
+    y: "-18vmin",
+    ease: "linear",
+    backgroundImage: "url(../img/nothing)",
+    duration: 4,
+  })
+  .to(".felloff_spritesheet", { opacity: 1, ease: "linear", duration: 0 }, "<");
