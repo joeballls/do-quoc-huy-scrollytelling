@@ -123,12 +123,13 @@ section {
   left: 40vw;
 }
 
-.hallway {
+.hallway1 {
   width: 3066px;
   height: 630px;
   background-size: contain;
   top: 20vh;
   left: -10vh;
+  z-index: 1;
   background-image: url(../assets/img/chapitre1/hallway.png);
   position: absolute;
 }
@@ -138,7 +139,16 @@ section {
   height: 630px;
   background-size: contain;
   background-size: contain;
-  z-index: 1;
+  z-index: 3;
+  position: absolute;
+}
+
+.doorframe {
+  width: 3066px;
+  height: 630px;
+  background-size: contain;
+  background-size: contain;
+  z-index: 3;
   position: absolute;
 }
 
@@ -152,7 +162,7 @@ section {
   background-image: url(../assets/img/chapitre1/rising_spritesheet.png);
   position: absolute;
   display: inline-block;
-  z-index: 1;
+  z-index: 2;
 
   animation-name: rising;
   animation-duration: 1s;
@@ -170,7 +180,7 @@ section {
   background-image: url(../assets/img/chapitre1/walk_anim_spritesheet.png);
   position: absolute;
   display: inline-block;
-  z-index: 1;
+  z-index: 2;
 
   animation-name: walking;
   animation-duration: 1s;
@@ -200,6 +210,7 @@ section {
 #ch2 {
   background-image: url(../assets/img/chapitre2/bg_ch2.png);
   position: relative;
+  z-index: -1;
 }
 
 .text_ch2 {
@@ -216,6 +227,7 @@ section {
   left: -181vh;
   background-image: url(../assets/img/chapitre1/hallway.png);
   position: absolute;
+  z-index: 4;
 }
 
 .doorway2 {
@@ -274,7 +286,7 @@ section {
   width: 157px;
   height: 450px;
   left: 30vw;
-  top: 14vh;
+  top: 15vh;
   position: absolute;
   z-index: 2;
 }
@@ -381,6 +393,7 @@ section {
 #ch3 {
   background-image: url(../assets/img/chapitre2/bg_ch2.png);
   position: relative;
+  z-index: 2;
 }
 
 .text_ch3 {
@@ -394,7 +407,7 @@ section {
   width: 15vw;
   height: 15vw;
   top: 36vh;
-  left: 4vw;
+  left: -11vw;
   aspect-ratio: 1/1;
   background-size: 90vw 100%;
   background-image: url(../assets/img/chapitre1/walk_anim_spritesheet.png);
@@ -567,7 +580,7 @@ section {
   width: 430px;
   height: 160px;
   top: 50vh;
-  left: 5vw;
+  left: 100vw;
   position: absolute;
   z-index: 1;
   filter: brightness(70%);
@@ -577,7 +590,7 @@ section {
   width: 420px;
   height: 170px;
   top: 49vh;
-  left: 28vw;
+  left: 100vw;
   position: absolute;
   z-index: 1;
   filter: brightness(70%);
@@ -587,7 +600,7 @@ section {
   width: 420px;
   height: 200px;
   top: 46vh;
-  left: 70vw;
+  left: -30vw;
   position: absolute;
   z-index: 1;
   filter: brightness(70%);
@@ -598,6 +611,7 @@ section {
 #ch4 {
   background-image: url(../assets/img/chapitre2/bg_ch2.png);
   position: relative;
+  z-index: 0;
 }
 
 .text_ch4 {
@@ -623,6 +637,13 @@ section {
   animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-timing-function: steps(6);
+}
+
+.standing4{
+  width: 15vw;
+  height: 15vw;
+  position: absolute;
+  z-index: 3;
 }
 
 .bridge_front {
@@ -677,6 +698,7 @@ section {
   background-color: var(--purple);
   opacity: 50%;
   position: absolute;
+  z-index: 7;
 }
 
 /* chapter5*/
@@ -696,18 +718,25 @@ section {
   width: 15vw;
   height: 15vw;
   top: 57vh;
-  left: -5vw;
+  left: 10vw;
   aspect-ratio: 1/1;
   background-size: 90vw 100%;
   background-image: url(../assets/img/chapitre1/walk_anim_spritesheet.png);
   position: absolute;
   display: inline-block;
-  z-index: 3;
+  z-index: 5;
 
   animation-name: walking3;
   animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-timing-function: steps(6);
+}
+
+.standing5{
+  width: 15vw;
+  height: 15vw;
+  position: absolute;
+  z-index: 3;
 }
 
 .parallax2 {
@@ -721,19 +750,23 @@ section {
   height: 263px;
   bottom: 0px;
   position: absolute;
+  z-index: 3;
 }
 
 .empty_walls {
   width: 1420px;
   height: 150px;
+  bottom: -0vh;
+  right: -70vw;
   position: absolute;
-  display: none;
+  z-index: 1;
 }
 
 /* chapter6*/
 #ch6 {
   background-image: url(../assets/img/chapitre6/bg_ch6.png);
   position: relative;
+  z-index: 5;
 }
 
 .text_ch6 {
