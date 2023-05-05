@@ -26,14 +26,13 @@ body {
 }
 
 header {
-  background-image: url(../assets/img/header_bg.png);
+  background-image: url(assets/img/header_bg.png);
   font-family: pressStart;
   height: 100vh;
   width: 100vw;
   display: flex;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* delete this to make header not sticky :)*/
   background-position: center;
   justify-content: center;
 }
@@ -112,7 +111,7 @@ section {
 
 /* chapter1*/
 #ch1 {
-  background-image: url(../assets/img/chapitre2/bg_ch2.png);
+  background-image: url(assets/img/chapitre2/bg_ch2.png);
   position: relative;
   z-index: 2;
 }
@@ -130,7 +129,7 @@ section {
   top: 20vh;
   left: -10vh;
   z-index: 1;
-  background-image: url(../assets/img/chapitre1/hallway.png);
+  background-image: url(assets/img/chapitre1/hallway.png);
   position: absolute;
 }
 
@@ -159,7 +158,7 @@ section {
   left: 10vw;
   aspect-ratio: 1/1;
   background-size: 180vw 100%;
-  background-image: url(../assets/img/chapitre1/rising_spritesheet.png);
+  background-image: url(assets/img/chapitre1/rising_spritesheet.png);
   position: absolute;
   display: inline-block;
   z-index: 2;
@@ -177,7 +176,7 @@ section {
   left: 10vw;
   aspect-ratio: 1/1;
   background-size: 120vw 100%;
-  background-image: url(../assets/img/chapitre1/walk_anim_spritesheet.png);
+  background-image: url(assets/img/chapitre1/walk_anim_spritesheet.png);
   position: absolute;
   display: inline-block;
   z-index: 2;
@@ -208,7 +207,7 @@ section {
 
 /* chapter2*/
 #ch2 {
-  background-image: url(../assets/img/chapitre2/bg_ch2.png);
+  background-image: url(assets/img/chapitre2/bg_ch2.png);
   position: relative;
   z-index: -1;
 }
@@ -225,7 +224,7 @@ section {
   height: 420px;
   top: 30vh;
   left: -181vh;
-  background-image: url(../assets/img/chapitre1/hallway.png);
+  background-image: url(assets/img/chapitre1/hallway.png);
   position: absolute;
   z-index: 4;
 }
@@ -253,7 +252,7 @@ section {
   left: 4vw;
   aspect-ratio: 1/1;
   background-size: 60vw 100%;
-  background-image: url(../assets/img/chapitre1/walk_anim_spritesheet.png);
+  background-image: url(assets/img/chapitre1/walk_anim_spritesheet.png);
   position: absolute;
   display: inline-block;
   z-index: 5;
@@ -391,7 +390,7 @@ section {
 
 /* chapter3*/
 #ch3 {
-  background-image: url(../assets/img/chapitre2/bg_ch2.png);
+  background-image: url(assets/img/chapitre2/bg_ch2.png);
   position: relative;
   z-index: 2;
 }
@@ -410,7 +409,7 @@ section {
   left: -11vw;
   aspect-ratio: 1/1;
   background-size: 90vw 100%;
-  background-image: url(../assets/img/chapitre1/walk_anim_spritesheet.png);
+  background-image: url(assets/img/chapitre1/walk_anim_spritesheet.png);
   position: absolute;
   display: inline-block;
   z-index: 2;
@@ -609,7 +608,7 @@ section {
 
 /* chapter4*/
 #ch4 {
-  background-image: url(../assets/img/chapitre2/bg_ch2.png);
+  background-image: url(assets/img/chapitre2/bg_ch2.png);
   position: relative;
   z-index: 0;
 }
@@ -628,7 +627,7 @@ section {
   left: -5vw;
   aspect-ratio: 1/1;
   background-size: 90vw 100%;
-  background-image: url(../assets/img/chapitre1/walk_anim_spritesheet.png);
+  background-image: url(assets/img/chapitre1/walk_anim_spritesheet.png);
   position: absolute;
   display: inline-block;
   z-index: 3;
@@ -703,7 +702,7 @@ section {
 
 /* chapter5*/
 #ch5 {
-  background-image: url(../assets/img/chapitre5/parralaxe1.png);
+  background-image: url(assets/img/chapitre5/parralaxe1.png);
   position: relative;
   z-index: 6;
 }
@@ -722,7 +721,7 @@ section {
   left: 10vw;
   aspect-ratio: 1/1;
   background-size: 90vw 100%;
-  background-image: url(../assets/img/chapitre1/walk_anim_spritesheet.png);
+  background-image: url(assets/img/chapitre1/walk_anim_spritesheet.png);
   position: absolute;
   display: inline-block;
   z-index: 5;
@@ -765,7 +764,7 @@ section {
 
 /* chapter6*/
 #ch6 {
-  background-image: url(../assets/img/chapitre6/bg_ch6.png);
+  background-image: url(assets/img/chapitre6/bg_ch6.png);
   position: relative;
   z-index: 5;
 }
@@ -852,7 +851,7 @@ section {
   aspect-ratio: 1/1;
   background-size: 120vw 100%;
   top: 50px;
-  background-image: url(../assets/img/chapitre6/falling_fella_spritesheet.png);
+  background-image: url(assets/img/chapitre6/falling_fella_spritesheet.png);
   position: absolute;
   display: inline-block;
 
@@ -873,7 +872,7 @@ section {
 
 /* chapter7*/
 #ch7 {
-  background-image: url(../assets/img/chapitre7/bg_ch7.png);
+  background-image: url(assets/img/chapitre7/bg_ch7.png);
   position: relative;
   z-index: 7;
 }
@@ -891,7 +890,7 @@ section {
   left: 4vw;
   aspect-ratio: 1/1;
   background-size: 280vw 100%;
-  background-image: url(../assets/img/chapitre7/lilfella_felloff_spritesheet.png);
+  background-image: url(assets/img/chapitre7/lilfella_felloff_spritesheet.png);
   position: absolute;
   display: inline-block;
 
@@ -908,7 +907,7 @@ section {
   top: 52vh;
   aspect-ratio: 1/1;
   background-size: 120vw 100%;
-  background-image: url(../assets/img/chapitre1/walk_anim_spritesheet.png);
+  background-image: url(assets/img/chapitre1/walk_anim_spritesheet.png);
   position: absolute;
   display: inline-block;
   z-index: 3;

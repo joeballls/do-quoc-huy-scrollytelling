@@ -113,7 +113,7 @@ ch4_walk
   .to(
     ".walking4",
     {
-      backgroundImage: "url(../img/nothing)",
+      backgroundImage: "url(img/nothing)",
       ease: "Power0.easeNone",
       duration: 0,
     },
@@ -125,7 +125,7 @@ let ch5_walk = gsap.timeline();
 ch5_walk
   .to(".standing5", { opacity: 1, ease: "Power0.easeNone", duration: 0 })
   .to(".walking5", {
-    backgroundImage: "url(../img/nothing)",
+    backgroundImage: "url(img/nothing)",
     ease: "Power0.easeNone",
     duration: 0,
   })
@@ -133,7 +133,7 @@ ch5_walk
   .to(
     ".walking5",
     {
-      backgroundImage: "url(../assets/img/chapitre1/walk_anim_spritesheet.png)",
+      backgroundImage: "url(assets/img/chapitre1/walk_anim_spritesheet.png)",
       ease: "Power0.easeNone",
       duration: 0,
     },
@@ -146,7 +146,7 @@ ch5_walk
   .to(".walking5", { x: "120vmin", ease: "linear", duration: 3 }, "-=2.5")
   .to(".standing5", { opacity: 1, ease: "Power0.easeNone", duration: 0 })
   .to(".walking5", {
-    backgroundImage: "url(../img/nothing)",
+    backgroundImage: "url(img/nothing)",
     ease: "Power0.easeNone",
     duration: 0,
   })
@@ -212,7 +212,7 @@ ch7_end
     x: "85vmin",
     y: "-18vmin",
     ease: "linear",
-    backgroundImage: "url(../img/nothing)",
+    backgroundImage: "url(img/nothing)",
     duration: 4,
   })
   .to(".felloff_spritesheet", { opacity: 1, ease: "linear", duration: 0 }, "<");
