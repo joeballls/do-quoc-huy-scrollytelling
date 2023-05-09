@@ -6,34 +6,41 @@ const cta_anim = gsap.fromTo(
 cta_anim.yoyo(true);
 
 /* opacity: 0 to make stuff invisible*/
-
 let ch1_hallway = gsap.timeline();
 ch1_hallway
   .to(".door_open1", { opacity: 0, ease: "Power0.easeNone", duration: 0 }, "<")
-  .to(".hallway1", { x: "-235vmin", ease: "Power0.easeNone", duration: 1 }, "<")
+  .to(".walking1", { opacity: 0, ease: "Power0.easeNone", duration: 0 }, "<")
+  .to(".rising", {
+    backgroundPosition: "-160vw 0px",
+    ease: SteppedEase.config(8),
+    duration: 1,
+  })
+  .to(".walking1", { opacity: 1, ease: "Power0.easeNone", duration: 0 })
+  .to(".rising", { opacity: 0, ease: "Power0.easeNone", duration: 0 }, "<")
+  .to(".walking1", { x: "235vmin", ease: "linear", duration: 8 }, "<")
+  .to(".hallway1", { x: "-235vmin", ease: "linear", duration: 8 }, "<")
   .to(".door_closed1", { opacity: 0, ease: "Power0.easeNone", duration: 0 })
   .to(".door_open1", { opacity: 1, ease: "Power0.easeNone", duration: 0 })
-  .to(
-    ".hallway1",
-    { x: "-260vmin", ease: "Power0.easeNone", duration: 1 },
-    "+=0.7"
-  );
-
-let ch1_text = gsap.timeline();
-ch1_text.from(".text_ch1", {
-  opacity: 0,
-  ease: "Power0.easeNone",
-  duration: 2,
-});
-ch1_text.from(
-  ".text_ch1",
-  { y: "8vmin", ease: Power1.easeOut, duration: 2 },
-  "<"
-);
+  .to(".walking1", { x: "500vmin", ease: "Power0.easeNone", duration: 8 }, "<")
+  .from(
+    ".text_ch1",
+    { opacity: 0, ease: "Power0.easeNone", duration: 2 },
+    "-=8"
+  )
+  .from(".text_ch1", { y: "8vmin", ease: Power1.easeOut, duration: 2 }, "<");
 
 let ch2_road = gsap.timeline();
 ch2_road
   .from(".road_ch2", { x: "-260vmin", ease: "Power0.easeNone", duration: 2 })
+  .to(
+    ".walking2",
+    {
+      backgroundImage: "url(../img/nothing)",
+      ease: "Power0.easeNone",
+      duration: 0,
+    },
+    "<"
+  )
   .from(".building1", { y: "200vmin", ease: "Power0.easeNone", duration: 1 })
   .from(
     ".building2",
@@ -95,14 +102,24 @@ ch2_road
     { y: "200vmin", ease: "Power0.easeNone", duration: 1 },
     "-=0.7"
   )
-  .to(".walking2", { x: "200vmin", ease: "Power0.easeNone", duration: 5 });
+  .to(".walking2", { x: "200vmin", ease: "Power0.easeNone", duration: 5 })
+  .to(
+    ".walking2",
+    {
+      backgroundImage: "url(../assets/img/chapitre1/walk_anim_spritesheet.png)",
+      ease: "Power0.easeNone",
+      duration: 0,
+    },
+    "<"
+  )
+  .to(".standing2", { opacity: 0, ease: "Power0.easeNone", duration: 0 }, "<");
 
 let ch3_cars = gsap.timeline();
 ch3_cars
-  .to(".walking3", { x: "300vmin", ease: "linear", duration: 17 })
-  .from(".car1", { x: "-260vmin", ease: "expo.in", duration: 2 }, "-=16")
-  .from(".car2", { x: "-260vmin", ease: "expo.in", duration: 2 }, "-=14")
-  .from(".car3", { x: "260vmin", ease: "expo.in", duration: 2 }, "-=-18");
+  .to(".walking3", { x: "300vmin", ease: "linear", duration: 12 })
+  .from(".car1", { x: "-260vmin", ease: "expo.in", duration: 2 }, "-=10")
+  .from(".car2", { x: "-260vmin", ease: "expo.in", duration: 2 }, "-=7")
+  .from(".car3", { x: "260vmin", ease: "expo.in", duration: 2 }, "-=-11");
 
 let ch4_walk = gsap.timeline();
 ch4_walk
@@ -119,7 +136,8 @@ ch4_walk
     },
     ">"
   )
-  .to(".walking4", { y: "150vmin", ease: Circ.easeIn, duration: 6 });
+  .to(".walking4", { y: "150vmin", ease: Circ.easeIn, duration: 6 })
+  .to(".walking4", { opacity: 0, ease: Circ.easeIn, duration: 0 }, ">");
 
 let ch5_walk = gsap.timeline();
 ch5_walk
@@ -163,7 +181,7 @@ ch6_fall
   })
   .to(
     ".cloud1",
-    { y: "-150vmin", ease: "linear", repeat: -1, duration: 0.6 },
+    { y: "-150vmin", ease: "linear", repeat: -1, duration: 1.8 },
     "<"
   )
   .to(
@@ -173,7 +191,7 @@ ch6_fall
   )
   .to(
     ".cloud3",
-    { y: "-150vmin", ease: "linear", repeat: -1, duration: 0.6 },
+    { y: "-150vmin", ease: "linear", repeat: -1, duration: 1.5 },
     "-=0.1"
   )
   .to(
@@ -188,7 +206,7 @@ ch6_fall
   )
   .to(
     ".cloud7",
-    { y: "-150vmin", ease: "linear", repeat: -1, duration: 0.6 },
+    { y: "-150vmin", ease: "linear", repeat: -1, duration: 2 },
     "-=0.16"
   )
   .to(
@@ -205,6 +223,8 @@ ch6_fall
 
 let ch7_end = gsap.timeline();
 ch7_end
+  .to(".fade_to_black", { opacity: 0, ease: "linear", duration: 0 })
+  .to(".text_ch7", { opacity: 0, ease: "linear", duration: 0 })
   .to(".felloff_spritesheet", { opacity: 0, ease: "linear", duration: 0 })
   .from(".walking7", { x: "-120vmin", ease: "linear", duration: 4 })
   .to(".walking7", { x: "85vmin", y: "-18vmin", ease: "linear", duration: 4 })
@@ -215,4 +235,26 @@ ch7_end
     backgroundImage: "url(../img/nothing)",
     duration: 4,
   })
-  .to(".felloff_spritesheet", { opacity: 1, ease: "linear", duration: 0 }, "<");
+  .to(".felloff_spritesheet", { opacity: 1, ease: "linear", duration: 0 }, "<")
+  .to(
+    ".felloff_spritesheet",
+    {
+      backgroundPosition: "-260vw 0px",
+      ease: SteppedEase.config(13),
+      duration: 5,
+    },
+    "<"
+  )
+  .to(".fade_to_black", { opacity: 1, ease: "linear", duration: 4 })
+  .to(
+    ".felloff_spritesheet",
+    { x: "-85vmin", ease: "Power1. easeOut", duration: 9 },
+    "<"
+  )
+  .to(".text_ch7", { opacity: 1, ease: "linear", duration: 2 })
+  .to(
+    ".felloff_spritesheet",
+    { opacity: 0, ease: "Power1. easeOut", duration: 5 },
+    "<"
+  )
+  .to(".text_ch7", { opacity: 0, ease: "Power1. easeOut", duration: 5 });

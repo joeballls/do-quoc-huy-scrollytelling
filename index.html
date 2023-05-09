@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/css/styles.css" rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="/assets/img/temp_favicon.png" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="assets/img/temp_favicon.png" />
     <title>Out of Bounds</title>
   </head>
   <body>
@@ -19,18 +19,21 @@
       </p>
       <!-- call to action here -->
       <div class="cta">
-        <img src="/assets/img/cta_arrow.png" class="arrow" />
+        <img src="assets/img/cta_arrow.png" class="arrow" />
       </div>
     </header>
 
     <main>
       <section id="ch1">
-        <p class="text_ch1 story_text">Placeholder Text</p>
-        <!-- rising spritesheet -->
-        <div class="rising"></div>
-        <!-- walk spritesheet -->
-        <div class="walking1"></div>
+        <p class="text_ch1 story_text">Je suis dans un rêve.</p>
+
+        <div></div>
         <div class="hallway1">
+          <!-- rising spritesheet -->
+          <div class="rising"></div>
+          <!-- walk spritesheet -->
+          <div class="walking1"></div>
+
           <img src="assets/img/chapitre1/door_empty.png" class="doorframe" />
           <img
             src="assets/img/chapitre1/door_open.png"
@@ -44,7 +47,7 @@
       </section>
 
       <section id="ch2">
-        <p class="text_ch2 story_text">Placeholder Text</p>
+        <p class="text_ch2 story_text">Je suis dans un rêve.</p>
         <div class="hallway2">
           <img src="assets/img/chapitre1/door_open.png" class="doorway2" />
         </div>
@@ -84,12 +87,17 @@
           class="bg_building7"
         />
         <!-- walk spritesheet -->
-        <div class="walking2"></div>
+        <div class="walking2">
+          <img
+          src="assets/img/chapitre1/lilfella_standing.png"
+          class="standing2"
+        />
+        </div>
       </section>
 
       <section id="ch3">
         <!-- walk spritesheet -->
-        <p class="text_ch3 story_text">Placeholder Text</p>
+        <p class="text_ch3 story_text">Je suis dans un rêve.</p>
         <div class="walking3"></div>
         <img src="assets/img/chapitre3/arbre_avant1.png" class="tree1" />
         <img src="assets/img/chapitre3/arbre_avant2.png" class="tree2" />
@@ -112,7 +120,7 @@
       </section>
 
       <section id="ch4">
-        <p class="text_ch4 story_text">Placeholder Text</p>
+        <p class="text_ch4 story_text">Je suis dans un rêve.</p>
         <img src="assets/img/chapitre2/road.png" class="road_ch4" />
         <div class="walking4">
           <img
@@ -128,7 +136,7 @@
       </section>
 
       <section id="ch5">
-        <p class="text_ch5 story_text">Placeholder Text</p>
+        <p class="text_ch5 story_text">Je suis dans un rêve.</p>
         <img src="assets/img/chapitre5/parralaxe2.png" class="parallax2" />
         <div class="walking5">
           <img
@@ -141,7 +149,8 @@
       </section>
 
       <section id="ch6">
-        <p class="text_ch6 story_text">Placeholder Text</p>
+        
+        <p class="text_ch6 story_text">Je suis dans un rêve.</p>
         <img src="assets/img/chapitre6/cloud1.png" class="cloud1" />
         <img src="assets/img/chapitre6/cloud2.png" class="cloud2" />
         <img src="assets/img/chapitre6/cloud3.png" class="cloud3" />
@@ -154,7 +163,8 @@
       </section>
 
       <section id="ch7">
-        <p class="text_ch7 story_text">Placeholder Text</p>
+        <div class="fade_to_black"></div>
+        <p class="text_ch7 story_text">Je ne suis pas dans un rêve.</p>
         <div class="walking7">
           <div class="felloff_spritesheet"></div>
         </div>
@@ -165,8 +175,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/MotionPathPlugin.min.js"></script>
   <!-- paid stuff -->
+  <!-- delete this before submission -->
   <script src="https://assets.codepen.io/16327/DrawSVGPlugin3.min.js"></script>
   <script src="https://assets.codepen.io/16327/MorphSVGPlugin3.min.js"></script>
 
-  <script src="/script/script.js"></script>
+  <script src="script/script.js"></script>
 </html>
