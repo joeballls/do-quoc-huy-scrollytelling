@@ -17,6 +17,27 @@
   src: url(/assets/font/Roboto-Regular.ttf);
 }
 
+ul.technique-gsap{
+  background: rgba(0,0,0,0.3);
+  color: white;
+  font-size: 10px;
+  font-family: monospace;
+  font-weight: 400;
+  width: auto;
+  display: inline-block;
+  padding: 10px 20px 12px 20px;
+  margin: 0;
+  max-width: 300px;
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+}
+
+ul.technique-gsap li{
+  margin: 5px 0;
+}
+
 * {
   margin: 0;
 }
@@ -91,6 +112,7 @@ header {
   left: 0;
   right: 0;
   color: var(--white);
+  z-index: 10;
 }
 
 .cta {
@@ -106,10 +128,9 @@ section {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  border: red solid;
 }
 
-/* chapter1*/
+/* chapter1 */
 #ch1 {
   background-image: url(../assets/img/chapitre2/bg_ch2.png);
   position: relative;
@@ -152,7 +173,6 @@ section {
 }
 
 .hallway_doors{
-  border: red solid;
 }
 
 .rising {
@@ -166,7 +186,6 @@ section {
   position: absolute;
   display: inline-block;
   z-index: 2;
-  border: red solid;
 }
 
 .walking1 {
@@ -174,7 +193,6 @@ section {
   height: 20vw;
   top: 17vh;
   left: 14vw;
-  border: red solid;
   aspect-ratio: 1/1;
   background-size: 120vw 100%;
   background-image: url(../assets/img/chapitre1/walk_anim_spritesheet.png);
@@ -440,6 +458,13 @@ section {
   }
 }
 
+.wind{
+  z-index: 5;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+
 .tree1 {
   width: 232px;
   height: 433px;
@@ -621,7 +646,7 @@ section {
 #ch4 {
   background-image: url(../assets/img/chapitre2/bg_ch2.png);
   position: relative;
-  z-index: 0;
+  z-index: 1;
 }
 
 .text_ch4 {
@@ -718,6 +743,48 @@ section {
   z-index: 6;
 }
 
+.triangle1{
+  width: 222px;
+  height: 320px;
+  top: 120vh;
+  left: 20vw;
+  position: absolute;
+  z-index: 5;
+}
+
+.triangle2{
+  width: 222px;
+  height: 320px;
+  top: 130vh;
+  left: 40vw;
+  position: absolute;
+  z-index: 5;
+}
+
+.triangle3{
+  width: 222px;
+  height: 320px;
+  top: 150vh;
+  left: 27vw;
+  position: absolute;
+  z-index: 5;
+}
+
+.bubble{
+  z-index: 5;
+  position: absolute;
+  top: 50vh;
+  right: 15vw;
+}
+
+.bubble_cat{
+  z-index: 5;
+  position: absolute;
+  top: 50vh;
+  right: 15vw;
+  opacity: 0;
+}
+
 .text_ch5 {
   position: absolute;
   top: 25vh;
@@ -735,7 +802,7 @@ section {
   background-image: url(../assets/img/chapitre1/walk_anim_spritesheet.png);
   position: absolute;
   display: inline-block;
-  z-index: 5;
+  z-index: 4;
 
   animation-name: walking3;
   animation-duration: 1s;
@@ -747,12 +814,16 @@ section {
   width: 15vw;
   height: 15vw;
   position: absolute;
-  z-index: 3;
+  top: 5;
+  z-index: 2;
+  opacity: 0;
 }
 
 .parallax2 {
   width: 100%;
   height: 100%;
+  background-image: url(../assets/img/chapitre5/parralaxe2.png);
+  background-size: 1920px 2156px;
   position: absolute;
 }
 
@@ -779,7 +850,12 @@ section {
   position: relative;
   z-index: 5;
 }
-
+.motionpath{
+  position: absolute;
+  top: -10%;
+  left: 40%;
+  opacity: 0;
+}
 .text_ch6 {
   position: absolute;
   top: 10vh;
@@ -790,7 +866,7 @@ section {
 .cloud1 {
   width: 320px;
   height: 320px;
-  top: 101vh;
+  top: 110vh;
   left: 12vw;
   position: absolute;
   filter: brightness(90%);
@@ -799,7 +875,7 @@ section {
 .cloud2 {
   width: 320px;
   height: 320px;
-  top: 101vh;
+  top: 110vh;
   left: 72vw;
   position: absolute;
   filter: brightness(90%);
@@ -808,7 +884,7 @@ section {
 .cloud3 {
   width: 320px;
   height: 320px;
-  top: 101vh;
+  top: 110vh;
   left: 84vw;
   position: absolute;
   filter: brightness(90%);
@@ -817,7 +893,7 @@ section {
 .cloud4 {
   width: 320px;
   height: 320px;
-  top: 101vh;
+  top: 110vh;
   left: 36vw;
   position: absolute;
   filter: brightness(90%);

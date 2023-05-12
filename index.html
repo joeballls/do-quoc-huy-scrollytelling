@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/styles.min.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="assets/img/temp_favicon.png" />
     <title>Out of Bounds</title>
   </head>
-  <body>
+  <body class="" id="bodyScroll">
     <header>
       <h1 class="title">Out of Bounds</h1>
       <img class="bed" src="assets/img/fella_sleep.png" />
@@ -19,14 +19,26 @@
       </p>
       <!-- call to action here -->
       <div class="cta">
-        <img src="assets/img/cta_arrow.png" class="arrow" />
+        <img
+          src="assets/img/cta_arrow.png"
+          alt="call to action"
+          class="arrow"
+        />
       </div>
     </header>
 
     <main>
+      <!-----------------------------------CH1----------------------------------------->
       <section id="ch1">
+        <ul class="technique-gsap">
+          <li>
+            scrollTrigger
+            <ul>
+              <li>trigger= #ch1</li>
+            </ul>
+          </li>
+        </ul>
         <p class="text_ch1 story_text">Je suis dans un rêve.</p>
-
         <div></div>
         <div class="hallway1">
           <!-- rising spritesheet -->
@@ -34,29 +46,68 @@
           <!-- walk spritesheet -->
           <div class="walking1"></div>
 
-          <img src="assets/img/chapitre1/door_empty.png" class="doorframe" />
+          <img
+            src="assets/img/chapitre1/door_empty.png"
+            alt="empty door"
+            class="doorframe"
+          />
           <img
             src="assets/img/chapitre1/door_open.png"
             class="doorway door_open1"
+            alt="door open"
           />
           <img
             src="assets/img/chapitre1/door_closed.png"
             class="doorway door_closed1"
+            alt="door closed"
           />
         </div>
       </section>
 
+      <!-----------------------------------CH2----------------------------------------->
       <section id="ch2">
+        <ul class="technique-gsap">
+          <li>
+            scrollTrigger
+            <ul>
+              <li>trigger= #ch2</li>
+            </ul>
+          </li>
+        </ul>
         <p class="text_ch2 story_text">Je suis dans un rêve.</p>
         <div class="hallway2">
-          <img src="assets/img/chapitre1/door_open.png" class="doorway2" />
+          <img
+            src="assets/img/chapitre1/door_open.png"
+            alt="door open"
+            class="doorway2"
+          />
         </div>
-        <img src="assets/img/chapitre2/road.png" class="road_ch2" />
-        <img src="assets/img/chapitre2/batiment1.png" class="building1" />
-        <img src="assets/img/chapitre2/batiment2.png" class="building2" />
-        <img src="assets/img/chapitre2/batiment3.png" class="building3" />
-        <img src="assets/img/chapitre2/batiment1.png" class="building4" />
-        <img src="assets/img/chapitre2/batiment2.png" class="building5" />
+        <img src="assets/img/chapitre2/road.png" alt="road" class="road_ch2" />
+        <img
+          src="assets/img/chapitre2/batiment1.png"
+          alt="building1"
+          class="building1"
+        />
+        <img
+          src="assets/img/chapitre2/batiment2.png"
+          alt="building2"
+          class="building2"
+        />
+        <img
+          src="assets/img/chapitre2/batiment3.png"
+          alt="building3"
+          class="building3"
+        />
+        <img
+          src="assets/img/chapitre2/batiment1.png"
+          alt="building4"
+          class="building4"
+        />
+        <img
+          src="assets/img/chapitre2/batiment2.png"
+          alt="building5"
+          class="building5"
+        />
         <img src="assets/img/chapitre2/batiment3.png" class="building6" />
         <img
           src="assets/img/chapitre2/batimentBackground1.png"
@@ -89,15 +140,42 @@
         <!-- walk spritesheet -->
         <div class="walking2">
           <img
-          src="assets/img/chapitre1/lilfella_standing.png"
-          class="standing2"
-        />
+            src="assets/img/chapitre1/lilfella_standing.png"
+            class="standing2"
+          />
         </div>
       </section>
 
+      <!-----------------------------------CH3----------------------------------------->
       <section id="ch3">
+        <ul class="technique-gsap">
+          <li>
+            scrollTrigger
+            <ul>
+              <li>trigger= #ch3</li>
+            </ul>
+          </li>
+          <li>drawSVG</li>
+        </ul>
         <!-- walk spritesheet -->
         <p class="text_ch3 story_text">Je suis dans un rêve.</p>
+        <svg
+          class="wind"
+          width="1099"
+          height="257"
+          viewBox="0 0 1099 257"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            id="wind_path"
+            d="M2 170.293C21.5113 170.293 46.7056 182.968 65.0704 188.834C110.23 203.26 157.302 211.9 203.889 220.052C249.541 228.042 295.739 231.799 341.439 240.336C435.009 257.816 537.319 264.806 626.048 227.342C658.189 213.771 687.218 185.87 702.271 154.605C713.605 131.066 728.136 87.0361 696.725 70.4583C681.284 62.3088 655.906 57.47 639.518 64.7535C623.343 71.9425 617.78 81.6383 609.568 95.4963C587.441 132.834 599.069 168.167 640.944 179.485C665.321 186.073 687.573 193.85 712.413 198.818C728.586 202.052 744.272 201.67 760.746 201.67C779.355 201.67 802.44 205.157 820.013 198.184C857.837 183.175 896.418 170.344 934.586 156.031C966.678 143.997 994.102 116.671 1017.46 92.01C1031.1 77.6145 1043.58 61.9465 1055.81 46.2127C1066.87 31.999 1082.33 12.0046 1097.33 2"
+            stroke="white"
+            stroke-width="3"
+            stroke-linecap="round"
+          />
+        </svg>
+
         <div class="walking3"></div>
         <img src="assets/img/chapitre3/arbre_avant1.png" class="tree1" />
         <img src="assets/img/chapitre3/arbre_avant2.png" class="tree2" />
@@ -119,7 +197,16 @@
         <img src="assets/img/chapitre2/road.png" class="road_ch3" />
       </section>
 
+      <!-----------------------------------CH4----------------------------------------->
       <section id="ch4">
+        <ul class="technique-gsap">
+          <li>
+            scrollTrigger
+            <ul>
+              <li>trigger= #ch4</li>
+            </ul>
+          </li>
+        </ul>
         <p class="text_ch4 story_text">Je suis dans un rêve.</p>
         <img src="assets/img/chapitre2/road.png" class="road_ch4" />
         <div class="walking4">
@@ -135,22 +222,103 @@
         <div class="water"></div>
       </section>
 
+      <!-----------------------------------CH5----------------------------------------->
       <section id="ch5">
+        <ul class="technique-gsap">
+          <li>
+            scrollTrigger
+            <ul>
+              <li>trigger= #ch5</li>
+            </ul>
+          </li>
+          <li>parallax</li>
+          <li>morphSVG</li>
+        </ul>
         <p class="text_ch5 story_text">Je suis dans un rêve.</p>
-        <img src="assets/img/chapitre5/parralaxe2.png" class="parallax2" />
+        <img
+          src="assets/img/chapitre5/triangle.png"
+          alt="triangle"
+          class="triangle1"
+        />
+        <img
+          src="assets/img/chapitre5/triangle.png"
+          alt="triangle"
+          class="triangle2"
+        />
+        <img
+          src="assets/img/chapitre5/triangle.png"
+          alt="triangle"
+          class="triangle3"
+        />
+
+        <svg
+          class="bubble"
+          width="115"
+          height="118"
+          viewBox="0 0 115 118"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            id="bubble_path"
+            d="M114.5 55.5C114.5 85.8591 88.9971 110.5 57.5 110.5C26.0029 110.5 0.5 85.8591 0.5 55.5C0.5 25.1409 26.0029 0.5 57.5 0.5C88.9971 0.5 114.5 25.1409 114.5 55.5Z"
+            fill="#b84dbf"
+            fill-opacity="0.59"
+          />
+          <path
+            id="cat_path"
+            d="M31.0001 100.5C31.0001 100.5 42.5001 110.5 59.0001 111C75.5001 111.5 87.5001 100.5 87.5001 100.5C87.5001 100.5 103 89.5 107 77C111 64.5 110.5 60.5 107 51C103.5 41.5 92.5001 34 92.5001 34L101 11.5L75.5001 21C75.5001 21 69.5001 18 59.0001 18C48.5001 18 40.5001 21 40.5001 21L17.5001 11.5L26.5001 34C26.5001 34 14.5004 43.5 11.5001 51C8.4998 58.5 8.50012 68.5 11.5001 77C14.5001 85.5 31.0001 100.5 31.0001 100.5Z"
+            fill="#b84dbf"
+            fill-opacity="0"
+          />
+        </svg>
+
+        <div class="parallax2"></div>
         <div class="walking5">
           <img
             src="assets/img/chapitre1/lilfella_standing.png"
             class="standing5"
           />
         </div>
-        <img src="assets/img/chapitre5/parralaxe3.png" class="parallax3" />
-        <img src="assets/img/chapitre5/rebord_vide.png" class="empty_walls" />
+        <img
+          src="assets/img/chapitre5/parralaxe3.png"
+          alt="ground"
+          class="parallax3"
+        />
+        <img
+          src="assets/img/chapitre5/rebord_vide.png"
+          alt="walls"
+          class="empty_walls"
+        />
       </section>
 
+      <!-----------------------------------CH6----------------------------------------->
       <section id="ch6">
-        
+        <ul class="technique-gsap">
+          <li>
+            scrollTrigger
+            <ul>
+              <li>trigger= #ch6</li>
+            </ul>
+          </li>
+
+          <li>motionPath</li>
+        </ul>
         <p class="text_ch6 story_text">Je suis dans un rêve.</p>
+        <svg
+          class="motionpath"
+          width="335"
+          height="1580"
+          viewBox="0 0 335 1580"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            id="motionpath_path"
+            d="M252.512 27.1317C157.758 -42.2947 58.6591 29.9629 9.73622 204.151C-64.7981 469.528 362.959 353.403 332.438 650.633C308.483 883.917 38.6339 750.161 71.679 979.102C88.3449 1094.57 192.829 1079.45 181.577 1197.43C176.086 1255.01 145.964 1264.56 138.617 1321.34C133.319 1362.28 138.617 1579 138.617 1579"
+            stroke="white"
+          />
+        </svg>
         <img src="assets/img/chapitre6/cloud1.png" class="cloud1" />
         <img src="assets/img/chapitre6/cloud2.png" class="cloud2" />
         <img src="assets/img/chapitre6/cloud3.png" class="cloud3" />
@@ -162,7 +330,16 @@
         <img src="assets/img/chapitre6/soleil.png" class="sun" />
       </section>
 
+      <!-----------------------------------CH7----------------------------------------->
       <section id="ch7">
+        <ul class="technique-gsap">
+          <li>
+            scrollTrigger
+            <ul>
+              <li>trigger= #ch7</li>
+            </ul>
+          </li>
+        </ul>
         <div class="fade_to_black"></div>
         <p class="text_ch7 story_text">Je ne suis pas dans un rêve.</p>
         <div class="walking7">
@@ -174,10 +351,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/MotionPathPlugin.min.js"></script>
+
   <!-- paid stuff -->
   <!-- delete this before submission -->
+  <!--
   <script src="https://assets.codepen.io/16327/DrawSVGPlugin3.min.js"></script>
   <script src="https://assets.codepen.io/16327/MorphSVGPlugin3.min.js"></script>
-
-  <script src="script/script.js"></script>
+  -->
+  <script src="script/script.min.js"></script>
 </html>
