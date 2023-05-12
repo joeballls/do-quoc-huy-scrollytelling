@@ -9,12 +9,12 @@
 
 @font-face {
   font-family: pressStart;
-  src: url(/assets/font/PressStart2P-Regular.ttf);
+  src: url(../assets/font/PressStart2P-Regular.ttf);
 }
 
 @font-face {
   font-family: roboto;
-  src: url(/assets/font/Roboto-Regular.ttf);
+  src: url(../assets/font/Roboto-Regular.ttf);
 }
 
 ul.technique-gsap{
@@ -119,6 +119,11 @@ header {
   display: absolute;
   align-self: flex-end;
   margin-bottom: 0.3em;
+}
+
+.arrow{
+  width: 155px;
+  height: 155px;
 }
 
 section {

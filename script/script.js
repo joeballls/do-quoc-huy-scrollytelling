@@ -21,7 +21,7 @@ let ch1_hallway = gsap.timeline({
   scrollTrigger: {
     pin: true,
     scrub: 1,
-   
+
     start: "top",
     end: "+=" + window.innerHeight * 3,
     trigger: "#ch1",
@@ -54,7 +54,7 @@ let ch2_road = gsap.timeline({
   scrollTrigger: {
     pin: true,
     scrub: 1,
-   
+
     start: "top",
     end: "+=" + window.innerHeight * 3,
     trigger: "#ch2",
@@ -149,7 +149,7 @@ let ch3_cars = gsap.timeline({
   scrollTrigger: {
     pin: true,
     scrub: 1,
-   
+
     start: "top",
     end: "+=" + window.innerHeight * 3,
     trigger: "#ch3",
@@ -160,14 +160,14 @@ ch3_cars
   .to(".walking3", { x: "300vmin", ease: "linear", duration: 12 })
   .from(".car1", { x: "-260vmin", ease: "expo.in", duration: 2 }, "-=10")
   .from(".car2", { x: "-260vmin", ease: "expo.in", duration: 2 }, "-=7")
-  .from(".car3", { x: "260vmin", ease: "expo.in", duration: 2 }, "-=-11")
-  /* .from("#wind_path", { drawSVG: "0% 0%", duration: 5 }, "<"); */
+  .from(".car3", { x: "260vmin", ease: "expo.in", duration: 2 }, "-=-11");
+/* .from("#wind_path", { drawSVG: "0% 0%", duration: 5 }, "<"); */
 /*---------------------------------------------CH4------------------------------------------------------------*/
 let ch4_walk = gsap.timeline({
   scrollTrigger: {
     pin: true,
     scrub: 1,
-   
+
     start: "top",
     end: "+=" + window.innerHeight * 3,
     trigger: "#ch4",
@@ -197,7 +197,7 @@ let ch5_walk = gsap.timeline({
   scrollTrigger: {
     pin: true,
     scrub: 1,
-   
+
     start: "top",
     end: "+=" + window.innerHeight * 3,
     trigger: "#ch5",
@@ -265,7 +265,7 @@ ch6_fall
     scrollTrigger: {
       pin: true,
       scrub: 1,
-     
+
       start: "top",
       end: "+=" + window.innerHeight * 3,
       trigger: "#ch6",
@@ -284,7 +284,7 @@ let ch7_end = gsap.timeline({
   scrollTrigger: {
     pin: true,
     scrub: 1,
-   
+
     start: "top",
     end: "+=" + window.innerHeight * 3,
     trigger: "#ch7",
@@ -327,4 +327,4 @@ ch7_end
   )
   .to(".text_ch7", { opacity: 0, ease: "Power1. easeOut", duration: 5 });
 
-  /*my code sucks lol*/ 
+/*my code sucks lol*/
