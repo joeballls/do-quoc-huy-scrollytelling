@@ -160,8 +160,8 @@ ch3_cars
   .to(".walking3", { x: "300vmin", ease: "linear", duration: 12 })
   .from(".car1", { x: "-260vmin", ease: "expo.in", duration: 2 }, "-=10")
   .from(".car2", { x: "-260vmin", ease: "expo.in", duration: 2 }, "-=7")
-  .from(".car3", { x: "260vmin", ease: "expo.in", duration: 2 }, "-=-11");
-/* .from("#wind_path", { drawSVG: "0% 0%", duration: 5 }, "<"); */
+  .from(".car3", { x: "260vmin", ease: "expo.in", duration: 2 }, "-=-11")
+ .from("#wind_path", { drawSVG: "0% 0%", duration: 5 }, "<"); 
 /*---------------------------------------------CH4------------------------------------------------------------*/
 let ch4_walk = gsap.timeline({
   scrollTrigger: {
@@ -235,11 +235,11 @@ ch5_walk
   .to(".parallax3", { x: "-240vmin", ease: "linear", duration: 8 })
   .to(".empty_walls", { x: "-160vmin", ease: "linear", duration: 5 }, "<")
   .to(".bubble", { x: "-200vmin", ease: "linear", duration: 5 }, "<")
-  /* .to(
+   .to(
     "#bubble_path",
     { morphSVG: { shape: "#cat_path" }, ease: "linear", duration: 1 },
     "<"
-  ) */
+  ) 
   .to(".empty_walls", { x: "-200vmin", ease: "linear", duration: 2 }, "-=4.5")
   .to(".walking5", { x: "120vmin", ease: "linear", duration: 3 }, "-=2.5")
   .to(".standing5", { opacity: 1, ease: "Power0.easeNone", duration: 0 })
