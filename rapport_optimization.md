@@ -1,4 +1,4 @@
-# Rapport d'optimization du projet ScrollyTelling
+# Rapport d'optimisation du projet ScrollyTelling
 [Page Speed Insights - Rapport du 11 mai 2023, 23:41:34](https://pagespeed.web.dev/analysis/https-joeballls-github-io-do-quoc-huy-scrollytelling/ukapnmu1ul?form_factor=mobile)
 
 ## Problème #1
@@ -18,3 +18,6 @@ J'ai changer le chemin des polices. J'ai réussi à faire apparaître les police
 Pour résoudre ce problème, je dois mettre un width et un height à cta_arrow.png dans le header.
 ### Résultat
 J'ai ajouter une classe CSS (.arrow) à l'image et je lui ai donner un width et un height. J'ai réussi à donner l'image un width et un height.
+
+## Rapport projet ScrollyTelling après optimisation
+[Page Speed Insights - Rapport du 12 mai 2023, 00:10:29](https://pagespeed.web.dev/analysis/https-joeballls-github-io-do-quoc-huy-scrollytelling/bcqxgi46ac?form_factor=desktop)
